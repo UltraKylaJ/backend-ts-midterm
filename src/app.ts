@@ -3,6 +3,7 @@
 import express, { NextFunction, Request, Response } from 'express';
 import morgan from 'morgan';
 import path from 'path';
+import { db } from './models';
 
 const app = express();
 
@@ -20,6 +21,10 @@ app.use((req: Request, res: Response, next: NextFunction) => {
         message: "So sorry! This is not the URL you are looking for!!"
     });
 })
+
+db.sync().then(() => {
+    console.info("We're connected to the petDB database!")
+});
 
 app.listen(3000);
 
