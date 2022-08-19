@@ -1,0 +1,18 @@
+<h1>Pets To Adopt Today!</h1>
+<ul>
+    {{#each petList}}
+    <div class="card" style="width: 18rem;">
+        <img src={{imgUrl}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/pets/{{petId}}" class="btn btn-primary">Learn more!</a>
+            <a href="/pets/edit/{{petId}}" class="btn btn-primary">Edit this pet</a><br>
+            <form action="/pets/delete/{{petId}}" method="POST">
+                <button type="submit" class="btn-danger">This pet has been adopted! Goodbye!</button>
+            </form>
+        </div>
+    </div>
+    {{/each}}
+</ul>
+
+<a href="/pets/add">Add New Pet!</a>

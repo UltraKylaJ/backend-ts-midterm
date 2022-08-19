@@ -4,7 +4,7 @@ export class Pet extends Model<InferAttributes<Pet>, InferCreationAttributes<Pet
     declare petId: number;
     declare name: string;
     declare imgUrl: string;
-    declare age: number;
+    declare animal: string;
     declare description: string;
     declare createdOn: Date;
     declare updatedOn: Date;
@@ -26,8 +26,8 @@ export function PetFactory(sequelize: Sequelize) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        age: {
-            type: DataTypes.NUMBER,
+        animal: {
+            type: DataTypes.STRING,
             allowNull: false
         },
         description: {
