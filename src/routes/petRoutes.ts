@@ -1,9 +1,13 @@
 import { Router } from "express";
-import { allPets, onePet } from "../controllers/petController";
+import { addPet, addPetPage, allPets, onePet } from "../controllers/petController";
 
 const router = Router();
 
 router.get('/', allPets);
+
+router.get('/add', addPetPage);
+
+router.post('/add', addPet);
 
 
 

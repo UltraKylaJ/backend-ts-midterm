@@ -35,7 +35,6 @@ app.listen(3000);
 
 
 
-// Both cats and dogs, so it'll be a Pet Class.
-// It will list them like cards
-// Only button is to get more info.
+
+
 // Lost page needs a redirect button to homepage.

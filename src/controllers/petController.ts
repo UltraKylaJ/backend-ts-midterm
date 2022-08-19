@@ -21,3 +21,13 @@ export const onePet: RequestHandler = async (req, res, next) => {
         res.status(404).render('error', { message: 'Pet not found!' });
     }
 }
+
+export const addPetPage: RequestHandler = (req, res, next) => {
+    res.render('addPet');
+}
+
+export const addPet: RequestHandler = async (req, res, next) => {
+    let newPet: Pet = req.body;
+    await Pet.create(newPet);
+    res.redirect('/pets');
+}
