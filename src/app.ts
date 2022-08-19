@@ -15,20 +15,11 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, "../src/views"));
 app.set('view options', {layout: 'layout'});
 
-// TODO: Add routing middleware here
-// app.use('/coffee', coffeeRoutes);
-// app.use('/', defaultCoffee);
-
 app.use((req: Request, res: Response, next: NextFunction) => {
     res.status(404).render('error', {
         message: "So sorry! This is not the URL you are looking for!!"
     });
 })
-
-// // Syncing our database
-// db.sync().then(() => {
-//     console.info("connected to the database!")
-// });
 
 app.listen(3000);
 
