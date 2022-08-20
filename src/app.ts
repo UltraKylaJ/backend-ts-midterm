@@ -32,9 +32,3 @@ db.sync().then(() => {
 });
 
 app.listen(3000);
-
-
-
-
-
-// Lost page needs a redirect button to homepage.

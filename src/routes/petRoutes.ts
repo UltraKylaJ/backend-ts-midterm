@@ -13,7 +13,7 @@ router.get('/edit/:petId', editPetPage);
 
 router.post('/edit/:petId', editPet);
 
-router.post('/delete/:coffeeId', deletePet);
+router.post('/delete/:petId', deletePet);
 
 router.get('/:petId', onePet);
 

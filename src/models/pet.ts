@@ -6,8 +6,6 @@ export class Pet extends Model<InferAttributes<Pet>, InferCreationAttributes<Pet
     declare imgUrl: string;
     declare animal: string;
     declare description: string;
-    declare createdOn: Date;
-    declare updatedOn: Date;
 }
 
 export function PetFactory(sequelize: Sequelize) {
@@ -33,16 +31,6 @@ export function PetFactory(sequelize: Sequelize) {
         description: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        createdOn: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
-        updatedOn: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
         }
     }, {
         tableName: 'pets',

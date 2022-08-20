@@ -34,6 +34,7 @@ export const addPet: RequestHandler = async (req, res, next) => {
 
 export const editPetPage: RequestHandler = async (req, res, next) => {
     let petId = req.params.petId;
+    console.info(`${petId}`);
     let selectedPet: Pet | null = await Pet.findOne({
         where: { petId }
     })

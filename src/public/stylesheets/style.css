@@ -1,0 +1,20 @@
+body {
+    margin: 50px;
+    padding: 50px;
+    text-align: center;
+    background-color: #e63946;
+    border: #457b9d;
+    border-width: 3rem;
+    border-style: groove;
+}
+
+html {
+    background-color: #a8dadc;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
